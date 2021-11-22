@@ -76,7 +76,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         @include flexBox();
-        @media screen and (max-width: $mob_BP) {
+        @media screen and (max-width: $mobBP) {
             height: 640px;
             @include flexBox(column);
         }
@@ -109,7 +109,7 @@ body {
                 .search-form {
                     width: 100%;
                     @include flexBox();
-                    @media screen and (max-width: $mob_BP) {
+                    @media screen and (max-width: $mobBP) {
                         @include flexBox(column);
                     }
                     input {
@@ -122,7 +122,7 @@ body {
                         &:focus {
                             border-bottom: 5px solid $secondary;
                         }
-                        @media screen and (max-width: $mob_BP) {
+                        @media screen and (max-width: $mobBP) {
                             width: 100%;
                             margin: 8px 0;
                         }
@@ -136,7 +136,7 @@ body {
                 .quick-search {
                     width: 100%;
                     @include flexBox();
-                    @media screen and (max-width: $tab_BP) {
+                    @media screen and (max-width: $tabBP) {
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         grid-gap: 8px;
@@ -153,7 +153,7 @@ body {
                         i {
                             color: $secondary;
                             margin-right: 5px;
-                            @media screen and (max-width: $tab_BP) {
+                            @media screen and (max-width: $tabBP) {
                                 color: white;
                                 border: 1px solid $secondary;
                                 background: rgba($color: black, $alpha: 0.5);
@@ -161,7 +161,7 @@ body {
                                 border-radius: 50%;
                             }
                         }
-                        @media screen and (min-width: $tab_BP) {
+                        @media screen and (min-width: $tabBP) {
                             @include flexBox();
                             margin: 16px;
                             &:first-child {
@@ -177,28 +177,28 @@ body {
         }
     }
 
-    .downloadApp {
+    .featuresCon {
         @include flexBox(row, space-between);
-        flex-wrap: wrap;
         width: 100%;
-        max-width: 1080px;
+        max-width: 800px;
         padding: 16px;
         margin: auto;
+        @media screen and (max-width: 800px) {
+            @include flexBox(column);
+        }
         img {
-            width: 600px;
+            width: 100%;
+            max-width: 360px;
         }
         .features {
             * {
                 color: $primary;
             }
-            h1 {
-                text-decoration: underline;
-            }
             ul {
                 list-style: none;
                 margin-top: 16px;
                 li {
-                    margin: 8px 0;
+                    margin: 16px 0;
                     font-weight: 500;
                     i {
                         transform: rotate(45deg);
@@ -208,12 +208,41 @@ body {
             }
         }
     }
+
+    .downloadApp {
+        background-color: $primary;
+        *{
+            color: white;
+        }
+        .content-con {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 16px;
+            text-align: center;
+            @include flexBox(row, space-between);
+            @media screen and (max-width: 800px) {
+                @include flexBox(column);
+            }
+            #app {
+                width: 100%;
+                max-width: 500px;
+            }
+            h1{
+                margin-bottom: 16px;
+                span{
+                    color: $secondary;
+                }  
+            }
+        }
+    }
+
     .download {
-        background: $teal;
-        padding: 16px;
-        @include flexBox();
+        margin: 16px;
+        @include flexBox(column);
         img {
             width: 150px;
+            cursor: pointer;
         }
     }
 }

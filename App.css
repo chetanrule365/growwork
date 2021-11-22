@@ -337,7 +337,7 @@ body #landing-con #landing .content .quick-search .card i {
   }
 }
 
-body .downloadApp {
+body .featuresCon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,45 +351,69 @@ body .downloadApp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
-  max-width: 1080px;
+  max-width: 800px;
   padding: 16px;
   margin: auto;
 }
 
-body .downloadApp img {
-  width: 600px;
+@media screen and (max-width: 800px) {
+  body .featuresCon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-body .downloadApp .features * {
+body .featuresCon img {
+  width: 100%;
+  max-width: 360px;
+}
+
+body .featuresCon .features * {
   color: #07124f;
 }
 
-body .downloadApp .features h1 {
-  text-decoration: underline;
-}
-
-body .downloadApp .features ul {
+body .featuresCon .features ul {
   list-style: none;
   margin-top: 16px;
 }
 
-body .downloadApp .features ul li {
-  margin: 8px 0;
+body .featuresCon .features ul li {
+  margin: 16px 0;
   font-weight: 500;
 }
 
-body .downloadApp .features ul li i {
+body .featuresCon .features ul li i {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-right: 8px;
 }
 
-body .download {
-  background: #0ac8ce;
+body .downloadApp {
+  background-color: #07124f;
+}
+
+body .downloadApp * {
+  color: white;
+}
+
+body .downloadApp .content-con {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
   padding: 16px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,6 +421,54 @@ body .download {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  body .downloadApp .content-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .downloadApp .content-con #app {
+  width: 100%;
+  max-width: 500px;
+}
+
+body .downloadApp .content-con h1 {
+  margin-bottom: 16px;
+}
+
+body .downloadApp .content-con h1 span {
+  color: #ffc400;
+}
+
+body .download {
+  margin: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -407,5 +479,6 @@ body .download {
 
 body .download img {
   width: 150px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */
