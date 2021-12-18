@@ -95,43 +95,25 @@ body {
             width: 800px;
             background-size: cover;
             background-repeat: no-repeat;
+            padding: 16px;
             @include flexBox();
             .blur {
-                opacity: 0.3;
+                opacity: 0.5;
                 z-index: -1;
             }
             .content {
                 @include flexBox(column);
-                #landing-title {
+                h1{
                     color: white;
                     margin-bottom: 24px;
+                    span{
+                        color: $secondary;
+                        
+                    }
                 }
-                .search-form {
-                    width: 100%;
-                    @include flexBox();
-                    @media screen and (max-width: $mobBP) {
-                        @include flexBox(column);
-                    }
-                    input {
-                        padding: 8px;
-                        border: none;
-                        outline: none;
-                        border-radius: 3px;
-                        border-bottom: 5px solid transparent;
-                        margin-right: 5px;
-                        &:focus {
-                            border-bottom: 5px solid $secondary;
-                        }
-                        @media screen and (max-width: $mobBP) {
-                            width: 100%;
-                            margin: 8px 0;
-                        }
-                    }
-                    button {
-                        padding: 11px 16px;
-                        border-radius: 3px;
-                        background: $secondary;
-                    }
+                #landing-title {
+                    color: white;
+                    margin-bottom: 8px;
                 }
                 .quick-search {
                     width: 100%;

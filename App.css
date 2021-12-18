@@ -144,6 +144,7 @@ body #landing-con #landing {
   width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,7 +161,7 @@ body #landing-con #landing {
 }
 
 body #landing-con #landing .blur {
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -180,70 +181,18 @@ body #landing-con #landing .content {
           align-items: center;
 }
 
-body #landing-con #landing .content #landing-title {
+body #landing-con #landing .content h1 {
   color: white;
   margin-bottom: 24px;
 }
 
-body #landing-con #landing .content .search-form {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body #landing-con #landing .content h1 span {
+  color: #ffc400;
 }
 
-@media screen and (max-width: 560px) {
-  body #landing-con #landing .content .search-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-body #landing-con #landing .content .search-form input {
-  padding: 8px;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  border-bottom: 5px solid transparent;
-  margin-right: 5px;
-}
-
-body #landing-con #landing .content .search-form input:focus {
-  border-bottom: 5px solid #ffc400;
-}
-
-@media screen and (max-width: 560px) {
-  body #landing-con #landing .content .search-form input {
-    width: 100%;
-    margin: 8px 0;
-  }
-}
-
-body #landing-con #landing .content .search-form button {
-  padding: 11px 16px;
-  border-radius: 3px;
-  background: #ffc400;
+body #landing-con #landing .content #landing-title {
+  color: white;
+  margin-bottom: 8px;
 }
 
 body #landing-con #landing .content .quick-search {
