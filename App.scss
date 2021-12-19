@@ -18,6 +18,11 @@ button {
     outline: none;
     cursor: pointer;
 }
+input,
+textarea {
+    border: none;
+    outline: none;
+}
 .blur {
     position: absolute;
     left: 0;
@@ -59,14 +64,24 @@ button {
     }
 }
 
-.divider {
-    width: 100%;
-    height: 5px;
-    background-color: $teal;
-}
-
 body {
     background-color: $background;
+    #pdf-dialog {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        @include flexBox();
+        background: rgba($color: #000000, $alpha: 0.7);
+        iframe {
+            width: 800px;
+            height: 90%;
+            border-radius: 5px;
+            box-shadow: 1px 1px 16px 4px rgb(175, 175, 175);
+            background: white;
+        }
+    }
     #landing-con {
         position: relative;
         height: 400px;
@@ -103,12 +118,11 @@ body {
             }
             .content {
                 @include flexBox(column);
-                h1{
+                h1 {
                     color: white;
                     margin-bottom: 24px;
-                    span{
+                    span {
                         color: $secondary;
-                        
                     }
                 }
                 #landing-title {
@@ -238,17 +252,39 @@ body {
             max-width: $tabBP;
             padding: 32px 16px;
             margin: auto;
+            @include flexBox(row, space-between, flex-start);
             section {
                 @include flexBox(column, center, flex-start);
                 h4 {
                     color: $secondary;
-                    margin: 8px;
+                    margin: 8px 0;
                 }
-                a {
-                    text-decoration: none;
-                    color: white;
+                button {
                     font-size: 12px;
-                    margin: 8px;
+                    margin: 8px 0;
+                    background: none;
+                    &[type="submit"] {
+                        background: white;
+                        color: $primary;
+                        padding: 8px;
+                        font-weight: 600;
+                        border-radius: 3px;
+                    }
+                }
+                i{
+                    margin-right: 16px;
+                    margin-top: 16px;
+                    font-size: 24px;
+                }
+                input, textarea {
+                    padding: 4px 8px;
+                    width: 300px;
+                    margin-bottom: 16px;
+                    border-radius: 3px;
+                    color: black;
+                }
+                #feedback-form{
+                    @include flexBox(column)
                 }
             }
         }

@@ -12,6 +12,9 @@
         ></script>
     </head>
     <body>
+        <div id="pdf-dialog">
+            <iframe src="" frameborder="0"></iframe>
+        </div>
         <div id="landing-con">
             <img id="logo" src="images/logo.png" alt="logo" />
             <div class="blur"></div>
@@ -49,7 +52,6 @@
                 </div>
             </div>
         </div>
-        <div class="divider"></div>
 
         <div class="featuresCon">
             <img src="images/hand_holding_phone.png" alt="advertise" />
@@ -104,10 +106,33 @@
             <div class="footer-con">
                 <section>
                     <h4>Growwork</h4>
-                    <a href="pdfs/ABOUT_US.pdf" target="_blank" rel="noopener noreferrer">About Us</a>
-                    <a href="pdfs/FAQS.pdf" target="_blank" rel="noopener noreferrer">FAQs</a>
-                    <a href="pdfs/TERMS_AND_CONDITIONS.pdf" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
-                    <a href="pdfs/PRIVACY POLICY.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    <button onclick="showDialog('./pdfs/ABOUT_US.pdf')">
+                        About Us
+                    </button>
+                    <button onclick="showDialog('./pdfs/FAQS.pdf')">
+                        FAQs
+                    </button>
+                    <button
+                        onclick="showDialog('./pdfs/TERMS_AND_CONDITIONS.pdf')"
+                    >
+                        Terms & Conditions
+                    </button>
+                    <button onclick="showDialog('./pdfs/PRIVACY_POLICY.pdf')">
+                        Privacy Policy
+                    </button>
+                    <div>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </section>
+                <section>
+                    <h4>Feedback</h4>
+                    <form id="feedback-form">
+                        <input type="email" placeholder="Email" />
+                        <textarea cols="30" rows="5" placeholder="Feedback"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
                 </section>
             </div>
             <p class="copyright">
@@ -116,7 +141,5 @@
         </footer>
 
         <script src="main.js"></script>
-        <script src="js/renderFeaturedBussCards.js"></script>
-        <script src="js/renderPopularBussCards.js"></script>
     </body>
 </html>

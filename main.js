@@ -33,6 +33,9 @@ const landingInfo = [
 const landing_con = document.getElementById("landing-con");
 const landing = document.getElementById("landing");
 const landingTitleEle = document.querySelector("#landing-title");
+const feedbackForm = document.getElementById("feedback-form");
+const iframe = document.getElementsByTagName("iframe");
+const pdfDialog = document.getElementById("pdf-dialog");
 window.onload = () => {
     const random = Math.floor(Math.random() * landingInfo.length);
     landingTitleEle.textContent = landingInfo[random].title;
@@ -40,8 +43,16 @@ window.onload = () => {
     landing.style.backgroundImage = `url(${landingInfo[random].imageURL})`;
 };
 
-const searchForm = document.getElementById("search-form");
-searchForm.addEventListener("submit", function (e) {
+feedbackForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(e.target.elements);
+});
+
+function showDialog(src) {
+    let req_iframe = iframe[0];
+    pdfDialog.style.visibility = "visible";
+    req_iframe.src = src;
+}
+
+pdfDialog.addEventListener("click", () => {
+    pdfDialog.style.visibility = "hidden";
 });
