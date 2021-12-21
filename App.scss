@@ -99,9 +99,9 @@ body {
             position: absolute;
             left: 0px;
             top: 0px;
-            width: 140px;
+            width: 160px;
             z-index: 10;
-            filter: saturate(0.5) invert(1);
+            filter: brightness(0) invert(1);
             margin: 8px;
         }
         #landing {
@@ -253,6 +253,12 @@ body {
             padding: 32px 16px;
             margin: auto;
             @include flexBox(row, space-between, flex-start);
+            @media screen and (max-width: $mobBP) {
+                @include flexBox(column, center, flex-start);
+                #feedback-form {
+                    margin-top: 32px;
+                }
+            }
             section {
                 @include flexBox(column, center, flex-start);
                 h4 {
@@ -271,20 +277,22 @@ body {
                         border-radius: 3px;
                     }
                 }
-                i{
+                i {
                     margin-right: 16px;
                     margin-top: 16px;
                     font-size: 24px;
+                    cursor: pointer;
                 }
-                input, textarea {
+                input,
+                textarea {
                     padding: 4px 8px;
                     width: 300px;
                     margin-bottom: 16px;
                     border-radius: 3px;
                     color: black;
                 }
-                #feedback-form{
-                    @include flexBox(column)
+                #feedback-form {
+                    @include flexBox(column, center, flex-start);
                 }
             }
         }

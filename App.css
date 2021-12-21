@@ -162,10 +162,10 @@ body #landing-con #logo {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 140px;
+  width: 160px;
   z-index: 10;
-  -webkit-filter: saturate(0.5) invert(1);
-          filter: saturate(0.5) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
   margin: 8px;
 }
 
@@ -490,6 +490,27 @@ body footer .footer-con {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 560px) {
+  body footer .footer-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body footer .footer-con #feedback-form {
+    margin-top: 32px;
+  }
+}
+
 body footer .footer-con section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -529,9 +550,11 @@ body footer .footer-con section i {
   margin-right: 16px;
   margin-top: 16px;
   font-size: 24px;
+  cursor: pointer;
 }
 
-body footer .footer-con section input, body footer .footer-con section textarea {
+body footer .footer-con section input,
+body footer .footer-con section textarea {
   padding: 4px 8px;
   width: 300px;
   margin-bottom: 16px;
@@ -550,9 +573,9 @@ body footer .footer-con section #feedback-form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 body footer .copyright {
